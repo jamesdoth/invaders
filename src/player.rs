@@ -1,11 +1,13 @@
 use crate::{
     frame::{Drawable, Frame},
+    shot::Shot,
     NUM_COLS, NUM_ROWS,
 };
 
 pub struct Player {
     x: usize,
     y: usize,
+    shots: Vec<Shot>,
 }
 
 impl Player {
