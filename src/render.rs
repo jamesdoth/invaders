@@ -5,10 +5,7 @@ use crossterm::{
     terminal::{Clear, ClearType},
     QueueableCommand,
 };
-use std::{
-    io::{Stdout, Write},
-    iter::Enumerate,
-};
+use std::io::{Stdout, Write};
 
 pub fn render(stdout: &mut Stdout, last_frame: &Frame, curr_frame: &Frame, force: bool) {
     if force {
