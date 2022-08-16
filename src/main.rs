@@ -79,6 +79,9 @@ fn main() -> Result<(), Box<dyn Error>> {
         if invaders.update(delta) {
             audio.play("move");
         }
+        if player.detect_hits(&mut invaders) {
+            audio.play("explode");
+        }
 
         // Draw & render
         player.draw(&mut curr_frame);
